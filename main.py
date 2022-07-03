@@ -1,5 +1,5 @@
 from writeHTML import openHTML, delfiles
-from calculate import mean, variance1, SD
+from calculate import excepted, variance1, SD
 from createStatistic import createStatic
 import pandas as pd
 
@@ -23,7 +23,7 @@ if __name__ == '__main__':
     colLen = len(RV)
 
     # 그래프 생성 및 계산 -> html 열기
-    openHTML(mean(RV, pro), variance1(RV, pro), SD(
+    openHTML(excepted(RV, pro), variance1(RV, pro), SD(
         RV, pro), createStatic(RV, pro, colLen))
     delfiles()
 # E:\programing\a.xlsx
