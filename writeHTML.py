@@ -18,7 +18,7 @@ body{
 '''
 
 
-def openHTML(mean, variance, SD, static):
+def openHTML(excepted, variance, SD, static):
     textHTML = f'''
 <!DOCTYPE html>
 <html lang="ko">
@@ -30,7 +30,7 @@ def openHTML(mean, variance, SD, static):
 <body>
     <img src="output.jpg">
     <div id="wrap-value">
-        <div>mean is {mean}</div> 
+        <div>mean is {excepted}</div> 
         <div>variance is {variance}</div> 
         <div>standard Deviation is {SD}</div>
     </div>
