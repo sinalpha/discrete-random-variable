@@ -52,4 +52,4 @@ def delfiles():
     if(answer == '1' or answer == '' ):
         return
     else:
-        os.system("del /f src ")
+        os.system("del statistics.html statistics.css output.jpg  ")
