@@ -18,7 +18,7 @@ body{
 '''
 
 
-def openHTML(excepted, variance, SD, static):
+def openHTML(mean,variance, SD, static):
     textHTML = f'''
 <!DOCTYPE html>
 <html lang="ko">
@@ -30,7 +30,7 @@ def openHTML(excepted, variance, SD, static):
 <body>
     <img src="output.jpg">
     <div id="wrap-value">
-        <div>mean is {excepted}</div> 
+        <div>mean is {mean}</div> 
         <div>variance is {variance}</div> 
         <div>standard Deviation is {SD}</div>
     </div>
@@ -38,20 +38,18 @@ def openHTML(excepted, variance, SD, static):
 </html>
 '''
 
-    f = open('statistics.html', 'w')
+    f = open('src/statistics.html','w')
     f.write(textHTML)
     f.close
-    f = open('statistics.css', 'w')
+    f = open('src/statistics.css','w')
     f.write(textCSS)
     f.close
-    os.startfile('statistics.html')
-
+    os.startfile('src\statistics.html')
+    
 
 def delfiles():
-    answer = input(
-        "Do you want to keep created files saved? 1 : yes 2 : no (default : 1) : ")
-    if(answer == 2):
+    answer = input("Do you want to keep created files saved? 1 : yes 2 : no (default : 1) : ")
+    if(answer == '1' or answer == '' ):
         return
     else:
-        os.system("del statistics.html statistics.css output.jpg ")
-        return
+        os.system("del /f src ")
