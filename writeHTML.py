@@ -38,13 +38,13 @@ def openHTML(mean,variance, SD, static):
 </html>
 '''
 
-    f = open('src/statistics.html','w')
+    f = open('statistics.html','w')
     f.write(textHTML)
     f.close
-    f = open('src/statistics.css','w')
+    f = open('statistics.css','w')
     f.write(textCSS)
     f.close
-    os.startfile('src\statistics.html')
+    os.startfile('statistics.html')
     
 
 def delfiles():
